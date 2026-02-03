@@ -1,4 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Microphone access for live monitoring. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <!-- Media file selection/playback on Android 13+. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+
+    <!-- Legacy external storage read permission (used on older Android). -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+
     <application
         android:label="mobile_frontend"
         android:name="${applicationName}"
